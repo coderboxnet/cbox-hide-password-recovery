@@ -3,7 +3,7 @@
  * Plugin Name: Hide Password Recovery
  * Plugin URI: https://github.com/coderboxnet/cbox-hide-password-recovery
  * Description: Hide lost password link and disable the password recovery form.
- * Version: 0.1.0
+ * Version: 0.1.1
  * Author: CODERBOX
  * Author URI: https://www.coderbox.net/
  *
