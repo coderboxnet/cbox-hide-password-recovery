@@ -3,7 +3,7 @@ name: PHP Code Linting
 on: push
 
 jobs:
-  build:
+  lint:
 
     runs-on: ubuntu-latest
 
@@ -24,7 +24,7 @@ jobs:
 
     - name: Install dependencies
       if: steps.composer-cache.outputs.cache-hit != 'true'
-      run: composer install --no-suggest
+      run: composer install --prefer-dist
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
