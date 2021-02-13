@@ -1,6 +1,7 @@
 {
 	"name": "coderbox/hide-password-recovery",
 	"description": "Small WordPress plugin to disable the recovery password workflow",
+	"version": "0.1.2",
 	"type": "wordpress-plugin",
 	"minimum-stability" : "dev",
 	"license": "GPL-3.0 License",

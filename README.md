@@ -2,7 +2,7 @@
 
 ![Lint status](https://github.com/coderboxnet/cbox-hide-password-recovery/workflows/PHP%20Code%20Linting/badge.svg?branch=main)
 
-**Last stable version: v0.1.1**
+**Last stable version: v0.1.2**
 ## Description
 Small WordPress plugin to hide the lost password link from the login form and prevent the user to access the password reset/recovery form by redirecting them to another url.
 
