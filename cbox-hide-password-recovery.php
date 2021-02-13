@@ -14,18 +14,26 @@
 /**
  * Remove lost password link
  *
- * @param string $text The text to compare.
+ * @param string $translation Translated text.
+ * @param string $text Text to translate.
+ * @param string $domain Text domain. Unique identifier for retrieving translated strings.
  * @return string Updated text.
  * @since 0.1.0 cbox_hide_lost_password_text( $text ) introduced
+ * @since 0.1.2 Updated list of parameters and improved the translation validation.
  * @see https://developer.wordpress.org/reference/hooks/gettext/
  */
-function cbox_hide_lost_password_text( $text ) {
-	if ( 'Lost your password?' === $text ) {
-		$text = '';
+function cbox_hide_lost_password_text( $translation, $text, $domain ) {
+	$allowed_domains = array( 'default' );
+	if ( in_array( $domain, $allowed_domains, true ) ) {
+		$lost_password_text = 'Lost your password?';
+
+		if ( 0 === strcasecmp( $lost_password_text, $text ) ) {
+			$translation = '';
+		}
 	}
-	return $text;
+	return $translation;
 }
-add_filter( 'gettext', 'cbox_hide_lost_password_text' );
+add_filter( 'gettext', 'cbox_hide_lost_password_text', 20, 3 );
 
 /**
  * Use this function to retrieve the final url
